@@ -1,5 +1,4 @@
 export declare class MessagesController {
-    constructor();
     getMessages(): {
         message: string;
     };
