@@ -1,8 +1,7 @@
+import { QuotesService } from '../services/quotes.service';
 export declare class MessagesController {
-    getMessages(): {
-        message: string;
-    };
-    getMessage(id: any): {
-        message: string;
-    };
+    private quotesService;
+    constructor(quotesService: QuotesService);
+    getMessages(): import("rxjs").Observable<any>;
+    getMessage(id: any): import("rxjs").Observable<any>;
 }
