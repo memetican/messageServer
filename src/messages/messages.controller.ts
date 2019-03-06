@@ -1,5 +1,6 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 import { QuotesService } from '../services/quotes.service';
+import { MessageDto } from './message.dto';
 
 @Controller('messages')
 export class MessagesController {
@@ -15,6 +16,12 @@ export class MessagesController {
     @Get(':id')
     getMessage(@Param('id') id) {
         return this.quotesService.getQuote(id);
+    }
+
+    @Post()
+    createMessage(@Body() message: MessageDto){
+        console.log(message);
+        return message;
     }
 
     // @Get()
