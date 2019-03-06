@@ -7,9 +7,9 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "format": "prettier --write \"src/**/*.ts\"",
-    "start": "node dist/server",
-    "start1": "ts-node -r tsconfig-paths/register src/main.ts",
-    "webpack": "webpack --config webpack.config.js",
+    "start_old": "node dist/server",
+    "start": "ts-node -r tsconfig-paths/register src/main.ts",
+    "webpack_old": "webpack --config webpack.config.js",
     "start:dev": "nodemon",
     "start:debug": "nodemon --config nodemon-debug.json",
     "prestart:prod": "rimraf dist && npm run build",
@@ -43,10 +43,7 @@
     "ts-loader": "^4.4.2",
     "ts-node": "^7.0.1",
     "tsconfig-paths": "^3.5.0",
-    "tslint": "5.11.0",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3",
-    "webpack-node-externals": "^1.7.2"
+    "tslint": "5.11.0"
   },
   "jest": {
     "moduleFileExtensions": [
